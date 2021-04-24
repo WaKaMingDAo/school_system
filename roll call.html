@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8"> 
+   <title>點名</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="pos-f-t">
+   <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Menu">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+   </nav>
+   <div class="bg-dark collapse position-fixed" id="Menu">
+      <div class="py-4">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#OP1">
+            <span class="text-white mx-4">點名</span>
+         </button>
+         <br>
+         <br>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#OP2">
+            <span class="text-white mx-4">功能2</span>
+         </button>
+         <br>
+         <br>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#OP3">
+            <span class="text-white mx-4">功能3</span>
+         </button>
+         <br>
+         <br>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#OP4">
+            <span class="text-white mx-4">功能4</span>
+         </button>
+         <br>
+         <br>
+   </div>
+</div>
+
+<div class="dropdown collapse" data-toggle="collapse" id="OP1" align="center">
+    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" style="width:200px; height:50px; font-size:20px;">
+        <span class="caret">節數</span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#first">
+               <span class="text-black mx-4">第一節</span>
+            </button>
+        </li>
+        <li role="presentation">
+            <button class="navbar-toggler" type="button"><span class="text-black mx-4">第二節</span></button>
+        </li>
+        <li role="presentation">
+            <button class="navbar-toggler" type="button"><span class="text-black mx-4">第三節</span></button>
+        </li>
+        <li role="presentation">
+            <button class="navbar-toggler" type="button"><span class="text-black mx-4">第四節</span></button>
+        </li>
+    </ul>
+</div>
+
+<div class="collapse" data-toggle="collapse" id="first" align="center">
+   <table class="table" style="width:700px; height:200px; font-size:20px;">
+     <thead>
+       <tr>
+         <th>姓名</th>
+         <th>座號</th>
+         <th>出席情況</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>a</td>
+         <td>1</td>
+         <td>
+            <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" style="width:80px; height:30px; font-size:7px;">
+               <span class="caret">出席狀況</span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+               <li role="presentation">
+                  <button class="navbar-toggler" type="button"><span class="text-black mx-4">True</span></button>
+               </li>
+               <li role="presentation">
+                  <button class="navbar-toggler" type="button"><span class="text-black mx-4">False</span></button>
+               </li>
+            </ul>
+         </td>
+       </tr>
+       <tr>
+         <td>b</td>
+         <td>2</td>
+         <td>
+            <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" style="width:80px; height:30px; font-size:7px;">
+               <span class="caret">出席狀況</span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+               <li role="presentation">
+                  <button class="navbar-toggler" type="button"><span class="text-black mx-4">True</span></button>
+               </li>
+               <li role="presentation">
+                  <button class="navbar-toggler" type="button"><span class="text-black mx-4">False</span></button>
+               </li>
+            </ul>
+         </td>
+       </tr>
+       <tr>
+         <td>c</td>
+         <td>3</td>
+         <td>
+            <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" style="width:80px; height:30px; font-size:7px;">
+               <span class="caret">出席狀況</span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+               <li role="presentation">
+                  <button class="navbar-toggler" type="button"><span class="text-black mx-4">True</span></button>
+               </li>
+               <li role="presentation">
+                  <button class="navbar-toggler" type="button"><span class="text-black mx-4">False</span></button>
+               </li>
+            </ul>
+         </td>
+       </tr>
+     </tbody>
+   </table>
+</div>
+
+
+</body>
+</html>
+
+<style type="text/css">
+   #Menu
+   {
+      transform: translateX(-100%);
+      transition: transform .35s ease;
+      display: block;
+      height: 100%;
+      min-height: 100%;
+   }
+   #Menu.menu-show
+   {
+      transform: translateX(0%);
+   }
+</style>
+
+<script type="text/javascript">
+   const $menu = $('#Menu');
+
+   $menu.on('show.bs.collapse', function ()
+   {
+      $menu.addClass('menu-show');
+   });
+   $menu.on('hide.bs.collapse', function ()
+   {
+      $menu.removeClass('menu-show');
+   });
+</script>
