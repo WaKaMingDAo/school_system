@@ -1,3 +1,9 @@
+<?php
+    include_once 'includes/dbh.php'
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
