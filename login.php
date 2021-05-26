@@ -11,25 +11,20 @@
     <title>教師登入系統</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-    <!--<div class="container my-3 pt-3  bg-light shadow-lg rounded">-->
-    
-    
-    <div class="login_form shadow">
-        <h1>教師登入</h1>
-        <form action='includes/login.inc.php'  method="post" autocomplete="on">
-            <input type="email" class="input" name="email"placeholder="帳號"><br>
+<body class='login_body'>
+    <div class='login_flex'> 
+        <div class="login_form shadow">
+            <h1>教師登入</h1>
+            <form action='includes/login.inc.php'  method="post"    autocomplete="on">
+                <input type="email" class="input"   name="email"placeholder="帳號"><br>
 
-            <input type="password" class="input" name="password"  placeholder="密碼"><br>
+                <input type="password" class="input" name="password"    placeholder="密碼"><br>
 
-            <button type="button" class="button_signup" value="註冊"   onclick="location.href='regist.php'">註冊</button>
+                <button type="button" class="button_signup" value="註冊 "   onclick="location.href='regist.php'">註冊</button>
 
-            <button type="submit" class="button_login" value="Submit">登入</button><br>
-
-        </form>  
+                <button type="submit" class="button_login"  value="Submit">登入</button><br>
+            </form>  
+        </div>
     </div>
-        
-    
 </body>
 </html>
