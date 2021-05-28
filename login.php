@@ -15,8 +15,24 @@
     <div class='login_flex'> 
         <div class="login_form shadow">
             <h1>教師登入</h1>
+            <?php
+                if(isset($_GET['error'])){
+                    $message = $_GET['error'];
+                    if($message == 'no_data'){
+                        echo '<div class="alert alert-danger">
+                        <strong>失敗!</strong> 沒有此帳號
+                    </div>';
+                    }
+                    else if($message == 'false'){
+                        echo '<div class="alert alert-danger">
+                        <strong>失敗!</strong> 帳號或密碼錯誤
+                    </div>';
+                    }
+                }   
+            ?>
+
             <form action='includes/login.inc.php'  method="post"    autocomplete="on">
-                <input type="email" class="input"   name="email"placeholder="帳號"><br>
+                <input type="email" class="input"   name="email"placeholder="email"><br>
 
                 <input type="password" class="input" name="password"    placeholder="密碼"><br>
 

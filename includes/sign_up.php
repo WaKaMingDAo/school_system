@@ -8,8 +8,8 @@
     $email =  mysqli_real_escape_string($conn,$_POST['email']);
     $password =  mysqli_real_escape_string($conn,$_POST['password']);
 
-    $password = password_hash($password,PASSWORD_DEFAULT);
-    
+    $password = md5($password);
+
     $sql =  "INSERT INTO `teacher`(`name`, `password`, `birth`, `secure_id`, `address`, `phone_number`, `regist_time`, `email`) VALUES ('".$name."','".
     $password."','".$birth."','".$secure_id."','".$address."','".$phone_number."',".date("Y").",'".$email."');";
     $result = mysqli_query($conn,$sql);
